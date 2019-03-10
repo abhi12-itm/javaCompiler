@@ -1,0 +1,20 @@
+import java.util.*;
+class comment
+{
+	public static void main(String arg[])
+	{
+		Scanner sc=new Scanner(System.in);
+		String s;
+		System.out.println("Enter a statement");
+		s=sc.nextLine();
+		int l=s.length();
+		char c1=s.charAt(0);
+		char c2=s.charAt(1);
+		char c3=s.charAt(l-1);
+		char c4=s.charAt(l-2);
+		if((c1=='/' && c2=='/')||(c1=='/' && c2=='*' && c4=='*' && c3=='/'))
+		 System.out.println("Above statement is a comment");
+		else
+		 System.out.println("Above comment is not a comment");
+	}
+}
