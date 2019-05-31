@@ -1,0 +1,42 @@
+import java.io.*; 
+import java.util.*;
+class identifier
+{ 
+    public static void main(String args[]) 
+    { 
+        System.out.print("Enter a character:");
+		Scanner sc=new Scanner(System.in);
+		String str;
+		str=sc.nextLine();
+		char c=str.charAt(0);
+        int character = 0; 
+		int length;
+		String[] key = {"abstract" , "assert" , "boolean" , "break" , "byte" , "case" , "catch" , "char" , "class" , "const" , "continue" , "default" , "do" , "double" , "else" , "enum" , "extends" , "final" , "finally" , "float" , "for" , "goto" , "if" , "implements" , "import" , "instanceof" , "int" , "interface" , "long" , "native" , "new" , "package" , "private" , "protected"  , "public" , "return" , "short" , "static" , "strictfp" , "super" , "switch" , "synchronized" , "this" , "throw" , "throws" , "transient" , "try" , "void" , "volatile" , "while" , "true" , "false" , "null" };
+		
+		if(Arrays.asList(key).contains(str))
+			{
+				System.out.println("It is not a valid identifier");
+			}
+		else
+			{
+				if( (c>='a'&& c<='z')||(c>='A'&& c<='Z')||(c=='_') )
+					
+						for(int i = 0; i < str.length(); i++) 
+						{ 
+							char ch = str.charAt(i); 
+							if((ch>='a'&& ch<='z')||(ch>='A' && ch<='Z')||(ch>='0'&& ch<='9')||(ch=='_')||(ch=='$'))
+								character++;
+								
+						} 
+					
+				
+				length = character;
+				
+					if (length == str.length())
+						System.out.println("It is a valid identifier");
+					else
+						System.out.println("It is not a valid identifier");
+			
+			}	
+	} 
+}
